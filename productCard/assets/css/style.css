@@ -1,0 +1,149 @@
+:root{
+    --primary-color: #4caf50
+}
+*{
+    box-sizing: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient( to right, #4daf54, #3d8880);
+    box-sizing: border-box;
+    /* font-family: "Poppins"; */
+}
+.card{
+    margin: 30vh auto;
+    width: 320px;
+    height:400px;
+    background: #272d40;
+    padding:20px;
+    border-radius: 15px;
+    color: white;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.card__heart ,.card__cart{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.card__img{
+    width: 90%;
+    /* transform: translateY(-90px) rotate(-20deg); */
+    transition: 0.5s;
+}
+
+.card__img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__title,.card__price,.card__size ,.card__color,.card__action{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    margin: 5px;
+    transition: .5s ;
+}
+
+.card__title{
+    justify-content: center;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+.card__price{
+    justify-content: center;
+    font-size: 24px;
+}
+
+.card__size {
+    display: none;
+    margin-top:300px;
+}
+
+.card__size span{
+    margin: 0 5px ;
+    padding: 5px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+}
+
+.card__color{
+    display: none;
+}
+
+.card__color p{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.card__color--green{
+    background-color: green;
+}
+.card__color--red{
+    background-color: red;
+}
+.card__color--black{
+    background-color: #000;
+}
+.card__action{
+    display: none;
+    margin: 5px 0;
+}
+
+.card__action button{
+    font-size: 15px;
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transform: 0.25s linear;
+}
+
+.card__action button:first-child{
+    margin-right: 10px;
+}
+
+.card:hover .card__img{
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card__title {
+    transform: translate(-24px, -90px);
+}
+
+.card:hover .card__price {
+    transform: translate(-92px, -90px);
+}
+
+.card:hover .card__color,
+.card:hover .card__size,
+.card:hover .card__action {
+    display: flex;
+    animation: pullUp 0.5s linear forwards;
+}
+
+@keyframes pullUp{
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }to{
+        opacity: 1;
+        transform: translateY(-390px);
+    }
+}
+.card__action button:hover{
+    transform: scale(90%);
+}
