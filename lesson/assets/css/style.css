@@ -1,5 +1,12 @@
+*{
+    box-sizing: inherit;
+}
+
 body{
+    margin: 0;
+    padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: linear-gradient( to right, #4daf54, );;
+    background-image: linear-gradient( to right, #4daf54, );
+    box-sizing: border-box;
 }
