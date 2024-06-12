@@ -11,7 +11,6 @@ body{
     width: 100vw;
     background-image: linear-gradient( to right, #4daf54, #3d8880);
     box-sizing: border-box;
-    /* font-family: "Poppins"; */
     display: flex;
 }
 .card{
